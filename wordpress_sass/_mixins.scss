@@ -1,0 +1,27 @@
+
+
+@mixin mq($breakpoint: lg) {
+  @media #{map-get($breakpoints, $breakpoint)}  {
+    @content;
+  }
+}
+
+@mixin arrow($dir) {
+  top: 0;
+  @if $dir == 'r' {
+    left: 100%;
+    border-left-color: $tarq-base;
+    border-width: 2.1rem 0 2.1rem 3.2rem;
+    border-radius: 0  1.2rem  0  0;
+    @include mq(sm){
+        border-width: 1.8rem 0 1.8rem 2.4rem;
+    }
+  } @else{
+    right: 100%;
+    border-right-color: $tarq-base;
+    border-width: 2.1rem 3.2rem 2.1rem 0;
+    @include mq(sm){
+        border-width: 1.8rem 2.4rem 1.8rem 0;
+    }
+  }
+}

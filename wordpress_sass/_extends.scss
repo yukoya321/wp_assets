@@ -1,0 +1,68 @@
+%clearfix {
+    content: "";
+}
+
+%accordion {
+    width: 100%;
+    text-align: center;
+    font-size: 2.6rem;
+    padding: 1.6rem 0;
+}
+
+%accordion__title{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  letter-spacing: 0.2rem;
+}
+
+%accordion__transition{
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+
+%arrow{
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.6;
+    position: relative;
+    padding: 1.1rem 0 0.9rem;
+    background-color: $tarq-base;
+    width: 14%;
+    @include mq(sm){
+        width: 12%;
+    }
+}
+
+//triangle
+//足す border-top-color: #333;
+//     top: 100%;
+//     left: 10px;
+//     border-width: 11px 28px 11px 0;
+%tri{
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border-style: solid;
+    border-color: transparent;
+}
+
+%swiper-arrow{
+    content: "";
+    height: 0;
+    position: absolute;
+    top: 28%;
+    width: 0;
+    border-style: solid;
+    border-color: transparent;
+}
+
+%slide-navi{
+  background-color: $tarq-base;
+  color: #000;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+  opacity: 0.8;
+}

@@ -1,0 +1,138 @@
+//heightテキトー
+//ボーダーテキトー
+//top
+.card{
+  height: 150px;
+  margin: 0 2% $card-margin-bottom;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.2rem solid $bd-color;
+  @include mq{
+     margin: 0 0 $card-margin-bottom;
+  }
+  @include mq(sm){
+   max-height: 100px;
+  }
+  &__thumb{
+    height: 100%;
+    flex : 1 0 40%;
+    min-width: 150px;
+    overflow: hidden;
+    @include mq{
+      min-width: 200px;
+      max-width: 276.4px;
+    }
+    @include mq(sm){
+      flex : 1 0 100px;
+      min-width: 100px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &-body{
+    padding: 1.0rem;
+    height: 100%;
+    flex : 1 0 60%;
+    position: relative;
+    @include mq{
+      padding: 1.2rem 1.4rem 0 1.8rem;
+    }
+    @include mq(sm){
+      padding: 0.6rem;
+    }
+    &__title{
+      margin: 0.2rem 0 0.2rem;
+      line-height: 1.4;
+      font-size: 1.8rem;
+      @include mq{
+        margin: 0.2rem 0 0.6rem;
+        min-height: 3.0rem;
+        line-height: 1.2;
+        margin-top: 0;
+        margin-bottom: 0.6rem;
+      }
+      @include mq(sm){
+        min-height: 2.6rem;
+        font-size: 1.8rem;
+      }
+    }
+    &__body{
+      line-height: 1.6;
+      font-size: $p-card-body;
+      margin: 0;
+      word-break: break-all;
+      @include mq(sm){
+        line-height: 1.4;
+        font-size: 1.4rem;
+      }
+    }
+    &__more{
+      position: absolute;
+      font-weight: bold;
+      bottom: 0.8rem;
+      right: 6%;
+      font-size: $p-card-more;
+      background: linear-gradient(transparent 65%, $bg-yellow 0%);
+      padding: 0 0.6rem 0.1rem;
+      margin-bottom: 0;
+      @include mq{
+        bottom: 0.6rem;
+        right: 4%;
+      }
+      @include mq(sm){
+         bottom: 0.4rem;
+      }
+    }
+  }
+}
+
+//記事用
+
+aside{
+  .card{
+  height: 100px;
+  margin: 0 2% 0.6rem;
+  border: none;
+    &__thumb{
+      height: 100%;
+      flex : 1 0 40%;
+    }
+    &:nth-child(odd){
+        background-color: $tarq-odd;
+    }
+    &:nth-child(even){
+        background-color: $tarq-even;
+    }
+  }
+}
+
+//カテゴリー用
+
+.c-popular{
+  & .card{
+    max-height: 60px;
+    border: none;
+    padding: 0 1.6rem;
+    margin:0 2% $card-margin-bottom/2;
+    &:nth-child(odd){
+      background-color: $tarq-odd;
+    }
+    &:nth-child(even){
+        background-color: $tarq-even;
+    }
+    &__thumb{
+      min-width: 100px;
+    }
+    &-body{
+      display: flex;
+      align-items: center;
+      &__title{
+        font-size: 1.4rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}

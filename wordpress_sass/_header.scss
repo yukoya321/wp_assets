@@ -1,0 +1,73 @@
+%bg {
+  background-color: pink;
+}
+
+%bg-card {
+  background-color: #f00;
+}
+
+//heightテキトー
+
+header{
+  height: 120px;
+  margin: 0 auto;
+  margin-bottom: $sp-margin-bottom;
+  background-image: url('./images/bg_sp.png');
+  background-position: center center;
+  background-size: cover;
+  @include mq{
+    background-image: url('./images/bg_0627.png');
+  }
+  position: relative;
+  @include mq{
+    height: 160px;
+    width: 100%;
+    max-width: 1080px;
+  }
+  img{
+    width: 100%
+  }
+  h1{
+    display: block;
+    position: absolute;
+    margin : 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    @include mq{
+      top: 4px;
+      transform: translate(-50%, 0);
+    }
+    img{
+      vertical-align: bottom;
+      width: 100%;
+      height: auto;
+      @include mq{
+        width: 90%;
+      }
+    }
+  }
+  @include mq{
+    h1 {
+      margin: auto auto;
+      text-align: center;
+      a{
+      }
+    }
+  }
+}
+
+.header__logo{
+  // position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.custom-logo-link{
+  // position: absolute;
+  //bottom: 0;
+  // left: 50%;
+  // transform: translate(0,-50%);
+}
+

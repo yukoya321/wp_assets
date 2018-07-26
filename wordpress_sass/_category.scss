@@ -1,0 +1,107 @@
+.result{
+  margin-bottom: 3.0rem;
+  &__name{
+    text-align: center;
+    padding: 1.2rem;
+    //border-top: solid 0.2rem $tarq-h1;
+    border-bottom: solid 0.2rem $tarq-h1;
+  }
+}
+.categories{
+  margin: 0 auto 1.0rem;
+  @include mq{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 2.6rem;
+  }
+  .c-btn{
+    display: block;
+    width: 90%;
+    margin: 0 auto 1.0rem;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 2.0rem;
+    border-radius: 0.6rem 0.6rem 0.2rem 0.2rem;
+    background-image: url("./images/archives_border.png");
+    border-bottom: solid 0.5rem $tarq-h1;
+    user-select: none;
+    @include mq{
+      width: 48%;
+      &:nth-child(odd){
+         margin-right: 2%;
+      }
+      &:nth-child(even){
+         margin-left: 0;
+      }
+    }
+    &:active{
+      margin-bottom: 1.5rem;
+      transform: translateY(0.5rem);
+      border-bottom: none;
+      @include mq{
+          margin-bottom: 1.5rem;
+       }
+    }
+    &:last-child{
+      margin-bottom: 2.0rem;
+      @include mq{
+        margin-bottom: 1.0rem;
+      }
+      &:active{
+        margin-bottom: 2.5rem;
+        @include mq{
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.pager{
+  margin-bottom: 1.8rem;
+  ul{
+    margin-top: 0;
+    padding: 0;
+    margin-right: 5.6rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  li{
+    text-align: center;
+    list-style-type: none;
+    font-size: 1.6rem;
+    margin-right: 1.6rem;
+    border: 0.1rem solid $bd-color;
+  }
+  a{
+    display: block;
+    padding: 0.4rem 0.8rem;
+  }
+  .current{
+    background-color: $tarq-base;
+  }
+}
+
+.arrows{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 2.6rem;
+  &__next{
+    @extend %arrow;
+    text-align: right;
+    padding-right: 0.4rem;
+    &:after{
+      @extend %tri;
+      @include arrow(r);
+    }
+  }
+  &__prev{
+    @extend %arrow;
+    padding-left: 0.4rem;
+    margin-right: 0.6rem;
+    &:before{
+      @extend %tri;
+      @include arrow(l);
+    }
+  }
+}

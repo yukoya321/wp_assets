@@ -1,0 +1,69 @@
+.slide{
+  position:relative;
+  width: 100%;
+  margin-bottom: $sp-margin-bottom;
+  overflow: hidden;
+  @include mq{
+    min-height: 300px;
+  }
+  &__caption{
+    position: absolute;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    max-width: 90%;
+    top: 6%;
+    left: 4%;
+    background-color: $bg-yellow;
+    @include mq{
+      top: 8%;
+      left: 6%;
+      font-size: 1.8rem;
+      letter-spacing: 0.2rem;
+    }
+    a{
+      width: 96%;
+      overflow-x: hidden;
+      display: block;
+      margin: auto;
+      padding: 0.6rem 0.6rem;
+      @include mq{
+        padding: 0.8rem 1.4rem;
+      }
+    }
+  }
+  &__icon{
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    width: 20%;
+    z-index: 10;
+  }
+}
+.swiper{
+  &-slide{
+   img{
+      width: 100%;
+      height: auto;
+    }
+   }
+   &-button-next{
+    @extend %slide-navi;
+    &:after{
+      @extend %swiper-arrow;
+      left: 38%;
+      border-left-color: #fff;
+      border-width: 0.8rem 0 0.8rem 1.2rem;
+      }
+    }
+   &-button-prev{
+    @extend %slide-navi;
+    &:after{  
+      @extend %swiper-arrow;
+      right: 38%;
+      border-right-color: #fff;
+      border-width: 0.8rem 1.2rem 0.8rem 0;
+    }
+  }
+}
+

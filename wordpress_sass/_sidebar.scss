@@ -1,0 +1,38 @@
+.side{
+  & ul,li{
+    font-size: 1.6rem;
+    padding-left: 2.0rem;
+    margin: 0;
+  }
+  & li{
+    margin-bottom: 1.2rem;
+    padding: 0;
+  }
+  &-category{
+    & h3{
+      border-top: 0.1rem solid $bd-color;
+      border-bottom: 0.1rem solid $bd-color;
+      background: url("./images/icon_side_h3.png") no-repeat left center ;
+      margin-top: 0;
+      padding: 1.8rem 0 1.4rem;
+      padding-left: 2.6rem;
+      letter-spacing: 0.2rem;
+    }
+  }.card{
+    h3{
+      font-size: 1.8rem;
+    }
+    &__thumb{
+      width: auto;
+      min-width: auto;  
+    }
+    &-body{
+      display: flex;
+      &__title{
+        margin: auto 0;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+

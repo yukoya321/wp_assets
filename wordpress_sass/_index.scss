@@ -1,0 +1,54 @@
+//heightテキトー
+//ボーダーテキトー
+
+.popular{
+  margin-bottom: 2.0rem;
+  & .card{
+    &:nth-child(odd){
+        background-color: $tarq-odd;
+    }
+    &:nth-child(even){
+        background-color: $tarq-even;
+    }
+  }   
+}
+
+.arrival{
+  margin-bottom: 3.0rem;
+}
+
+.ads{
+  margin-bottom: 3.0rem;    
+  display: flex;
+  justify-content: space-between;
+  & .adsense:first-child{
+    margin-right: 2.4rem;
+  }
+}
+
+
+.btn{
+  display: block;
+  user-select: none;
+  width: 90%;
+  padding: 1.2rem;
+  margin: 0 auto 3.6rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  background-image: url("./images/archives_border.png");
+  border-radius: 0.6rem 0.6rem 0.2rem 0.2rem;
+  border-bottom: solid 0.5rem $tarq-h1;
+  @include mq{
+    width: 50%;
+  }
+  &:active{
+    margin: 0 auto 4.1rem;
+    transform: translateY(0.5rem);
+    border-bottom: none;
+    @include mq{
+        
+    }
+  }
+}

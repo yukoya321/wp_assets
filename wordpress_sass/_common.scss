@@ -1,0 +1,81 @@
+.adsense{
+  width: 100%;
+  max-width: 336px;
+  margin: 10px auto;
+}
+
+a{
+  text-decoration: none;
+  color: $base-color;
+}
+
+pre{
+  width: 100%;
+  overflow-x: scroll;
+}
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6, p{
+  color: $base-color;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2{
+  font-size: 24px;
+}
+
+h3{
+  font-size: 22px;
+}
+
+p{
+  font-size: 1.4rem;
+  margin: 0 0 1.6rem;
+  line-height: 1.5;
+}
+
+.widgetContent{
+  margin-bottom: 3.0rem;
+}
+
+.wrapper{
+  width: 100%;
+  margin: 0 auto 3.6rem;
+  //PC 2カラム用
+  @include mq{
+    max-width: 1080px;
+    display: flex;
+    main{
+      max-width: 720px;
+      flex: 1;
+      margin-left: 1.2rem;
+      margin-right: 1.2rem;
+    }
+    aside{
+      width: 336px;
+      min-width: 336px;
+      margin-right: 1.2rem;
+    }
+    article{
+      max-width: 720px;
+      margin-left: 1.2rem;
+      flex: 2 1 auto;
+      margin-right: 3.6rem;
+    }
+  }
+}
+
+.common__title{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: $sp-margin-bottom/2;
+  img{
+    width: 100%;
+  }
+}

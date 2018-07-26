@@ -1,0 +1,30 @@
+//breakpoint
+$breakpoints: (
+  'sm': 'screen and (max-width: 375px)',
+  'md': 'screen and (max-width: 500px)',
+  'lg': 'screen and (min-width: 600px)',
+  'xl': 'screen and (min-width: 600px)',
+) !default;
+//background color yellow
+$bg-yellow: #ffff2d;
+//tarquise
+$tarq-odd: #bff7f8;
+$tarq-even: #dffbfc;
+$tarq-h1: #00e1e5;
+$tarq-base: #00e1e5;
+//font base-color
+$base-color: #323232;
+//border color
+$bd-color: #adadad;
+
+$sp-margin-bottom: 30px;
+$card-margin-bottom: 1.0rem;
+
+$sp-line-heigth: 1.5;
+$h1-line-height: 1.5;
+
+$p-card-body: 1.2rem;
+$p-card-more: 1.5rem;
+//article
+$article-mb: 2.4rem;
+$a-color: #5454ff;

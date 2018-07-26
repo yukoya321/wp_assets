@@ -1,0 +1,154 @@
+article{
+  width: 96%;
+  margin: 0 2% $sp-margin-bottom;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  h1, h2, h3, h4, h5, h6, p{
+    margin-top: 0;
+    padding: 0;
+  }
+  h1{
+    padding: 1.6rem 0 1.6rem 2.8rem;
+    border-left: 0.6rem solid $tarq-h1;
+    margin-bottom: 1.8rem;
+    line-height: 1.3;
+  }
+  h2{
+    padding: 1.6rem 0 1.4rem 52px;
+    margin-bottom: 1.8rem;
+    background: url("./images/icon_body_h2.png") no-repeat left center $tarq-even;
+  }
+  h3{
+    padding: 1.6rem 0 1.4rem 3.2rem;
+    margin-bottom: 1.8rem;
+    background: url("./images/icon_body_h3.png") no-repeat left center;
+  }
+  h4, h5, h6{
+    border-bottom: $bd-color solid 0.1rem;
+    border-left: $bd-color solid 0.4rem;
+    padding-left: 3.0rem;;
+  }
+  h4{
+    font-size: 2.0rem;
+  }  
+  h5{
+    font-size: 1.8rem;
+  } 
+  h6{
+    font-size: 1.6rem;
+  }
+  p{
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    @include mq(md){
+      font-size: 16px;
+    }
+  }
+  a{
+    color: $a-color;
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+  }
+  div,img{
+    max-width: 100%;
+    height: auto;
+  }
+  img{
+    display: block;
+    margin: 0 auto $article-mb;
+  }
+  .alignleft{
+    display: block;
+    margin: 0 auto $article-mb 0;
+  }
+  .aligncenter{
+    display: block;
+    margin: 0 auto $article-mb;
+  }
+  .alignright {
+    display: block;
+    margin: 0  0 1.2rem auto;
+  }
+  .date{
+    font-size: 1.6rem;
+    text-align: right;
+    margin-bottom: $article-mb;
+    padding-right: 2%;
+    @include mq{
+      text-align: right;
+      margin-bottom: $article-mb;
+      padding-right: 2.6rem;
+    }
+  }
+  ul{
+    padding-left: 6%;
+  }
+  li{
+    font-size: 16px;
+    margin-top: $article-mb/2;
+    margin-bottom: $article-mb;
+    &:last-child{
+     margin-bottom: 0; 
+    }
+  }
+  blockquote{
+    background-color:#ddd;
+    padding: 2.6rem 1.0rem 1.6rem 4.6rem;
+    position:relative;
+    p{
+     line-height: 1.5; 
+     margin-bottom: 1.6rem;
+    }
+    &:before{
+    content: "“";
+    font-size: 600%;
+    line-height: 1em;
+    font-family:"ＭＳ Ｐゴシック",sans-serif;
+    color: #999;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  }
+  cite{
+   font-weight: bold; 
+  }
+  table, th, td {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    line-height: 1.5;
+    padding: 1.2rem;
+  }
+  th {
+    font-weight: bold;
+    vertical-align: top;
+    background: #3f3f3f;
+    color: #ffffff;
+    a {
+      color: #ffffff;
+    }
+  }
+  td {
+    vertical-align: top;
+  }
+  dl{
+    padding: 1.2rem;
+  }
+  dt{
+   font-weight: bold; 
+  }
+  dt, dd{
+    margin-bottom: $article-mb;
+  }
+  ol{
+    padding: 1.2rem 0 1.2rem 2.4rem;
+  }
+}
+
+
+.article{
+  &__image{
+    width: 100%;
+  }
+}
